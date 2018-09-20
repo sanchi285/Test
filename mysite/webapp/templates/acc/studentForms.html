@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% extends "acc/home.html" %}
+
+{% block content %} 
+<h2>Student Forms</h2>
+<form method="post" action="http://127.0.0.1:8000/abc/sub_it/">
+
+{% csrf_token %}
+  Name:<br>
+  <input type="text" name="name" value="">
+  <br>
+  Hobby:<br>
+  <input type="text" name="hobby" value="">
+  <br>
+  Address :<br>
+  <input type="text" name="address" value="" ><br>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form> 
+{% endblock %}
+
+</body>
+</html>

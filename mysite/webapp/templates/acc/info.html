@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+
+<body>
+ 
+{% extends "acc/home.html" %} 
+{% block content %}
+
+<h2>Our Student Survey</h2>
+
+<table>
+
+	<tr>
+	 <th>[Name]</th>
+	 <th>[Hobby]</th>
+	 <th>[Address]</th>
+	</tr>
+	{% for c in content %}
+	 <tr>
+	 <th>{{c.name}}</th>
+	 <th>{{c.hobby}}</th>
+	 <th>{{c.address}}</th>
+	 </tr>
+	{% endfor %}
+</table>
+{% endblock %}
+ 
+
+
+</body>
+</html>
+
+

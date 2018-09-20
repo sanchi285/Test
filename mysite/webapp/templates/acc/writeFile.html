@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+</head>
+
+<body>
+<p id="demo" onclick="myFunction()">Click me to change my HTML content (innerHTML).</p>
+{% extends "acc/cont.html" %}
+{% block content %} 
+<h2>Simple Text Area</h2>
+<p>Write something on Python file </p>
+ 
+<form method="post" action="http://127.0.0.1:8000/abc/writeI/">
+  {% csrf_token %}
+  <textarea id="textArea2" name="con" rows="100" cols="300">
+  </textarea>
+  <br>
+  <input type="submit">
+</form>
+{% endblock %}
+</body>
+</html>
